@@ -12,6 +12,7 @@ por Juan Manuel Bianchetti - 2016.
 
 
 ENGLISH.
+
 Homework of the Class #33 of Basic Programming Course - Make a new game from scratch.
 
 The idea is to make a game like that came on the Nokia 5120 phone, I can not forget the entertainment that it bring me in waiting rooms or while waiting for my girlfriend to be prepare to go parting or any downtime in what I could be harnessed to feed my "tamagotchi" phone snake.
