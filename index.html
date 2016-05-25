@@ -3,18 +3,33 @@
 <head>
 	<meta charset="utf-8"/>
 	<title>Snake</title>
-	<script type="text/javascript" src= snake.js></script> 
-	<style type="text/css" src= estilos.css></style>
+	<script type="text/javascript" src="snake.js"></script> 
+	<style type="text/css" src= snakeStylesheet.css></style>
+
 </head>
 <body>
-	<h1>Snake</h1>
-	<p>Mueve la serpiente con las flechas del teclado.</p>
-	<p>haz que coma los ratones que van apareciendo.</p>
-	<p>Evita que toque los bordes de la pantalla.</p>
-	<p>Y evita que se coma a si misma.</p>
-	<p>Suerte.</p>
-	<canvas id="canvas"></canvas>
-	<p>
+	<header><!--es donde vamos a incluir todo el contenido del encabezado. Por lo general es un logotipo y un menú-->
+		<div><!--el logo lo agregamos dentro de un div o separación-->
+			<img src="images\yarara.jpg" width="150" alt="Foto de la serpiente Yayará">
+		</div>	
+		<nav><!--es donde incluimos el menú de navegación. Este se compone de 				listas-->
+			<ul><!--es una lista desordenada-->
+				<li><a href="#">Inicio</a></li>
+				<li><a href="#">Categoria #1</a></li>
+				<li><a href="#">Categoria #1</a></li>
+			</ul>	
+		</nav>
+	</header>
+
+
+	<section class="wrapper"><!--encierra todo el contenido o "warapper" que se conoce como contenedor o contenido  -->
+		<h1>Snake</h1>
+		
+			<section class="main"><!—esta clase nos identifica que este es el contenido principal o los artículos-->
+			<p>Mueve la serpiente con las flechas del teclado.haz que coma los ratones que van apareciendo.Evita que toque los bordes de la pantalla.Y evita que se coma a si misma.</p>
+		<p>Suerte.</p>
+		<canvas id="canvas"></canvas>
+		<p>
 		Para comenzar preciona una flecha del teclado.
 		<h2>PUNTOS</h2>
 		<h2 id="puntos">0000</h2>

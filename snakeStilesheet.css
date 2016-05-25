@@ -1,0 +1,14 @@
+
+// This is de Stylesheet of Snake Game by Juan Manuel Bianchetti 2016.
+
+nav {
+	width: 100px;
+	height: 100px;
+	background: blue;
+	color: #fff;
+	font-size: 30px;
+	padding: 5px;
+	margin: 5px;
+	float: left;
+}
+
