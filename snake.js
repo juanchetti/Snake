@@ -64,9 +64,9 @@ var SnakeGame = function(con){
     this.colaX = this.cabezaX - this.paso; 
     this.colaY = this.cabezaY;
 
-    this.comidaX = 250;
-    this.comidaY = 250;
-    this.anchoComida = 50;
+    this.comidaX = 200;
+    this.comidaY = 200;
+    this.anchoComida = 5;
     
 
     this.drawComida();
@@ -92,8 +92,9 @@ SnakeGame.prototype.drawSnakeGame = function()
     else // como la serpiente no toco los limites del tablero de juego la puedo mover y dibujar
     {
         if (this.cabezaX == this.comidaX && 
-            this.cabezaX == this.comidaY) 
+            this.cabezaY == this.comidaY) 
         {
+            console.log("comio!!!!!")
             this.haComido = true;
             
         }
@@ -244,19 +245,21 @@ SnakeGame.prototype.drawComida = function()
     
     if (this.haComido) 
     {   
-        this.comidaX = aleatorio(this.tablero.xMin,this.tablero.xMax);
-        this.comidaY = aleatorio(this.tablero.yMin,this.tablero.yMax);
+        this.comidaX = aleatorio(this.tablero.xMin,this.tablero.xMax/10);
+        this.comidaY = aleatorio(this.tablero.yMin,this.tablero.yMax/10);
         this.haComido = false;
     }
     else
     {
-        contador();
+        console.log(" la serpiente esta en (" + this.cabezaX + " , " + this.cabezaY + " )" );
+        console.log(" la comida esta en (" + this.comidaX + " , " + this.comidaY + " )" );
+        // contador();
         // de momento la comida es una cruz
         draw.beginPath();
-        draw.moveTo(this.comidaX - this.anchoComida,this.cabezaY);
-        draw.lineTo(this.comidaX + this.anchoComida,this.cabezaY);
-        draw.moveTo(this.comidaY - this.anchoComida,this.cabezaX);
-        draw.lineTo(this.comidaY + this.anchoComida,this.cabezaX);
+        draw.moveTo(this.comidaX - this.anchoComida,this.comidaY);
+        draw.lineTo(this.comidaX + this.anchoComida,this.comidaY);
+        draw.moveTo(this.comidaX,this.comidaY - this.anchoComida);
+        draw.lineTo(this.comidaX,this.comidaY + this.anchoComida);
         draw.lineWidth = this.anchoComida; 
         draw.strokeStyle = "#000";
         draw.stroke();
@@ -269,6 +272,7 @@ SnakeGame.prototype.drawComida = function()
 function aleatorio(minimo, maximo)
     {
         var numero = Math.floor( Math.random() * (maximo - minimo +1) + minimo)
+        numero = numero *10;
         return numero;
     }
 
